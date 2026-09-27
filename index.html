@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>من الفكرة إلى الأثر — القيادة الشبابية وصناعة المبادرات | جميلة حبيب</title>
+  <meta name="description"
+    content="عرض تدريبي: من الفكرة إلى الأثر - القيادة الشبابية وصناعة المبادرات، تأطير جميلة حبيب">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Ambient background glow & 3D Interactive Canvas -->
+  <div class="ambient-glow"></div>
+  <canvas id="bg3dCanvas" class="bg-3d-canvas"></canvas>
+
+  <main class="presentation-wrapper">
+    <div class="slide-deck" id="slideDeck">
+
+      <!-- SLIDE 1: غلاف العرض -->
+      <section class="slide active" id="slide-1" data-title="من الفكرة إلى الأثر">
+        <div class="slide-header">
+          <span class="slide-badge">SLIDE 01 — البداية</span>
+          <img src="logo.png" alt="DZ Young Leaders" class="slide-header-logo" onerror="this.src='téléchargement.png'">
+        </div>
+        <div class="slide-body" style="justify-content: space-around;">
+          <div>
+            <h1 class="slide-title" style="font-size: clamp(2.4rem, 4.2vw, 3.6rem);">من الفكرة إلى الأثر</h1>
+            <h2 class="slide-subtitle" style="font-size: clamp(1.4rem, 2.3vw, 2rem);">القيادة الشبابية وصناعة المبادرات
+            </h2>
+            <h3 class="slide-focus" style="font-size: clamp(1.15rem, 1.8vw, 1.5rem);">كيف نحول أفكارنا كـشباب إلى
+              مبادرات حقيقية؟</h3>
+          </div>
+
+          <div class="trainer-hero">
+            <img src="trainer.jpg" alt="جميلة حبيب" class="trainer-avatar" onerror="this.src='member-6.jpg'">
+            <div class="trainer-details">
+              <span style="font-size: 0.95rem; color: var(--text-muted);">اسم المؤطرة:</span>
+              <h3 class="trainer-name">جميلة حبيب</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: لنبدأ بسؤال -->
+      <section class="slide" id="slide-2" data-title="لنبدأ بسؤال">
+        <div class="slide-header">
+          <span class="slide-badge">SLIDE 02 — لنبدأ بسؤال</span>
+          <img src="logo.png" alt="DZ Young Leaders" class="slide-header-logo" onerror="this.src='téléchargement.png'">
+        </div>
+        <div class="slide-body">
+          <h1 class="slide-title">هل تحتاج إلى منصب حتى تكون قائدًا؟</h1>
+          <h2 class="slide-subtitle">فكّر للحظة...</h2>
+
+          <div class="info-card" style="margin: clamp(0.4rem, 1vh, 0.8rem) 0;">
+            <p style="font-size: clamp(1.05rem, 1.4vh + 0.4vw, 1.4rem); line-height: 1.7; color: var(--text-main);">
+              هل القيادة مرتبطة بالمنصب؟<br>
+              أم بالقدرة على المبادرة والتأثير وتحمل المسؤولية؟
+            </p>
+          </div>
+
+          <!-- 3-Minute Discussion Hold & 3D Answer Reveal -->
+          <div class="answer-reveal-wrapper" id="answerWrapper2" data-timer-seconds="180">
+            <div class="answer-hold-card" id="answerHold2">
+              <div class="hold-info">
+                <div class="hold-title-row">
+                  <span class="hold-icon">⏳</span>
+                  <div>
+                    <h4 class="hold-heading">وقت التفكير والمناقشة (3 دقائق)</h4>
+                    <p class="hold-subheading">ستظهر الخلاصة القيادية تلقائيًا بعد 3 دقائق</p>
+                  </div>
+                </div>
+                <div class="hold-timer-box">
+                  <div class="hold-countdown" id="holdCount2">03:00</div>
+                  <div class="hold-progress-track">
+                    <div class="hold-progress-fill" id="holdProgress2"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="hold-actions">
+                <button class="btn-timer-action start-btn" id="btnHoldStart2" onclick="toggleHoldTimer(2, 180)">
+                  <span>▶</span> <span>بدء وقت التفكير</span>
+                </button>
+                <button class="btn-timer-action reset-btn" onclick="resetHoldTimer(2, 180)" title="إعادة ضبط">
+                  <span>🔄</span> <span>إعادة</span>
+                </button>
+                <button class="btn-timer-action reveal-now-btn" onclick="revealAnswer(2)">
+                  <span>👁️ كشف الإجابة فوراً</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="quote-box answer-box-3d" id="answerBox2">
+              <div class="answer-badge-ribbon">خلاصة الإجابة ✨</div>
+              المنصب يعطيك مسؤولية،<br>
+              لكن السلوك هو الذي يصنع القيادة.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: ما هي القيادة الشبابية؟ -->
+      <section class="slide" id="slide-3" data-title="ما هي القيادة الشبابية؟">
+        <div class="slide-header">
+          <span class="slide-badge">SLIDE 03 — ما هي القيادة الشبابية؟</span>
+          <img src="logo.png" alt="DZ Young Leaders" class="slide-header-logo" onerror="this.src='téléchargement.png'">
+        </div>
+        <div class="slide-body">
+          <h1 class="slide-title">القيادة ليست لقبًا... إنها تأثير.</h1>
+          <h3 class="slide-focus">القائد الشاب هو من:</h3>
+
+          <ul class="bullet-list" style="margin-bottom: 1.2rem;">
+            <li class="bullet-item"><span class="bullet-dot">•</span> يرى مشكلة ولا يكتفي بالشكوى</li>
+            <li class="bullet-item"><span class="bullet-dot">•</span> يمتلك الشجاعة ليبدأ</li>
+            <li class="bullet-item"><span class="bullet-dot">•</span> يستمع للآخرين</li>
+            <li class="bullet-item"><span class="bullet-dot">•</span> يحوّل الأفكار إلى أفعال</li>
+            <li class="bullet-item"><span class="bullet-dot">•</span> يعمل مع الفريق</li>
+            <li class="bullet-item"><span class="bullet-dot">•</span> يتعلم من الأخطاء</li>
+            <li class="bullet-item"><span class="bullet-dot">•</span> يبحث عن حلول ويصنع أثرًا</li>
+          </ul>
+
+          <div class="formula-banner">
+            القيادة = مبادرة + مسؤولية + تأثير
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: القائد لا يفعل كل شيء -->
+      <section class="slide" id="slide-4" data-title="القائد لا يفعل كل شيء">
+        <div class="slide-header">
+          <span class="slide-badge">SLIDE 04 — القائد لا يفعل كل شيء</span>
+          <img src="logo.png" alt="DZ Young Leaders" class="slide-header-logo" onerror="this.src='téléchargement.png'">
+        </div>
+        <div class="slide-body">
+          <h1 class="slide-title">هل القائد هو الشخص الذي يقوم بكل المهام؟</h1>
+          <div
+            style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 900; color: var(--dz-red); margin-bottom: 0.5rem;">
+            لا.</div>
+          <h3 class="slide-focus">القائد الحقيقي يعرف كيف:</h3>
+
+          <div class="process-flow">
+            <div class="process-step">يختار الفريق</div>
+            <div class="process-arrow">←</div>
+            <div class="process-step">يوزع الأدوار</div>
+            <div class="process-arrow">←</div>
+            <div class="process-step">يثق بالآخرين</div>
+            <div class="process-arrow">←</div>
+            <div class="process-step">يتابع التقدم</div>
+            <div class="process-arrow">←</div>
+            <div class="process-step">يحل المشكلات</div>
+            <div class="process-arrow">←</div>
+            <div class="process-step highlight">يحتفل بالنتائج</div>
+          </div>
+
+          <div class="quote-box">
+            القائد لا يصنع الأثر وحده،<br>
+            بل يساعد الفريق على صناعته.
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: 5 مهارات للقائد الشاب -->
+      <section class="slide" id="slide-5" data-title="5 مهارات للقائد الشاب">
+        <div class="slide-header">
+          <span class="slide-badge">SLIDE 05 — 5 مهارات للقائد الشاب</span>
+          <img src="logo.png" alt="DZ Young Leaders" class="slide-header-logo" onerror="this.src='téléchargement.png'">
+        </div>
+        <div class="slide-body">
+          <h1 class="slide-title">ماذا يحتاج القائد في القرن 21؟</h1>
+
+          <div class="cards-grid cards-grid-5" style="margin-top: 1.5rem;">
+            <div class="info-card">
+              <span class="card-num">01</span>
+              <h4 class="card-title">التواصل</h4>
+              <p class="card-desc">التعبير عن الأفكار والاستماع للآخرين.</p>
+            </div>
+
+            <div class="info-card">
+              <span class="card-num">02</span>
+              <h4 class="card-title">العمل الجماعي</h4>
+              <p class="card-desc">النجاح الجماعي أهم من الإنجاز الفردي.</p>
+            </div>
+
+            <div class="info-card">
+              <span class="card-num">03</span>
+              <h4 class="card-title">حل المشكلات</h4>
+              <p class="card-desc">تحويل التحديات إلى فرص للحلول.</p>
+            </div>
+
+            <div class="info-card">
+              <span class="card-num">04</span>
+              <h4 class="card-title">التكيف</h4>
+              <p class="card-desc">القدرة على التعامل مع التغيير والظروف غير المتوقعة.</p>
+            </div>
+
+            <div class="info-card">
+              <span class="card-num">05</span>
+              <h4 class="card-title">المبادرة</h4>
+              <p class="card-desc">عدم انتظار أن يبدأ شخص آخر.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: من أين تبدأ المبادرة؟ -->
+      <section class="slide" id="slide-6" data-title="من أين تبدأ المبادرة؟">
+        <div class="slide-header">
+          <span class="slide-badge">SLIDE 06 — من أين تبدأ المبادرة؟</span>
+          <img src="logo.png" alt="DZ Young Leaders" class="slide-header-logo" onerror="this.src='téléchargement.png'">
+        </div>
+        <div class="slide-body">
+          <h1 class="slide-title">كل مبادرة حقيقية تبدأ من...</h1>
+
+          <div class="process-flow" style="margin: 1.5rem 0;">
+            <div class="process-step">مشكلة</div>
+            <div class="process-arrow">←</div>
+            <div class="process-step">سؤال</div>
+            <div class="process-arrow">←</div>
+            <div class="process-step">فكرة</div>
+            <div class="process-arrow">←</div>
+            <div class="process-step">فعل</div>
+            <div class="process-arrow">←</div>
+            <div class="process-step">نتيجة</div>
+            <div class="process-arrow">←</div>
+            <div class="process-step highlight" style="font-size: 1.4rem;">أثر</div>
+          </div>
+
+          <div class="compare-container">
+            <div class="compare-card compare-bad">
+              <span>لا تبدأ بسؤال:</span>
+              <span style="font-size: 1.35rem;">"ماذا يمكنني أن أفعل؟"</span>
+            </div>
+            <div class="compare-card compare-good">
+              <span>ابدأ بسؤال:</span>
+              <span style="font-size: 1.35rem;">"ما المشكلة التي أريد أن أساهم في حلها؟"</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 7: نشاط 01 -->
+      <section class="slide" id="slide-7" data-title="نشاط 01 — اكتشف المشكلة">
+        <div class="slide-header">
+          <span class="slide-badge">SLIDE 07 — نشاط 01</span>
+          <img src="logo.png" alt="DZ Young Leaders" class="slide-header-logo" onerror="this.src='téléchargement.png'">
+        </div>
+        <div class="slide-body">
+          <h1 class="slide-title">اكتشف المشكلة 🔎</h1>
+
+          <div class="info-card" style="margin-bottom: clamp(0.3rem, 0.8vh, 0.8rem);">
+            <p
+              style="font-weight: 700; font-size: clamp(1rem, 1.3vh + 0.3vw, 1.2rem); color: var(--text-main); margin-bottom: clamp(0.2rem, 0.5vh, 0.5rem);">
+              فكر في مشكلة تواجه: <span style="color: var(--dz-green);">الشباب / الطلبة / مجتمعك / منطقتك</span>
+            </p>
+            <p style="font-weight: 700; margin-bottom: 0.3rem; color: var(--text-muted);">ثم أجب:</p>
+            <ol
+              style="padding-right: 1.5rem; line-height: 1.6; font-size: clamp(0.95rem, 1.2vh + 0.25vw, 1.12rem); color: var(--text-main);">
+              <li>ما المشكلة؟</li>
+              <li>من يتأثر بها؟</li>
+              <li>لماذا تستحق أن نهتم بها؟</li>
+            </ol>
+          </div>
+
+          <!-- 3-Minute Activity Timer & Rule Reveal -->
+          <div class="answer-reveal-wrapper" id="answerWrapper7" data-timer-seconds="180">
+            <div class="answer-hold-card" id="answerHold7">
+              <div class="hold-info">
+                <div class="hold-title-row">
+                  <span class="hold-icon">⏳</span>
+                  <div>
+                    <h4 class="hold-heading">الوقت المخصص للنشاط (3 دقائق)</h4>
+                    <p class="hold-subheading">ستظهر القاعدة التوجيهية بعد انتهاء الـ 3 دقائق</p>
+                  </div>
+                </div>
+                <div class="hold-timer-box">
+                  <div class="hold-countdown" id="holdCount7">03:00</div>
+                  <div class="hold-progress-track">
+                    <div class="hold-progress-fill" id="holdProgress7"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="hold-actions">
+                <button class="btn-timer-action start-btn" id="btnHoldStart7" onclick="toggleHoldTimer(7, 180)">
+                  <span>▶</span> <span>بدء وقت النشاط</span>
+                </button>
+                <button class="btn-timer-action reset-btn" onclick="resetHoldTimer(7, 180)" title="إعادة ضبط">
+                  <span>🔄</span> <span>إعادة</span>
+                </button>
+                <button class="btn-timer-action reveal-now-btn" onclick="revealAnswer(7)">
+                  <span>👁️ كشف القاعدة فوراً</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="quote-box answer-box-3d" id="answerBox7"
+              style="margin-top: 0.5rem; text-align: center; border-right: none; border: 1px dashed var(--dz-green);">
+              <div class="answer-badge-ribbon">القاعدة التوجيهية 🎯</div><br>
+              لا تبحث عن فكرة الآن...<br>
+              <span style="color: var(--dz-green);">ابحث عن المشكلة أولًا.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 8: من المشكلة إلى الفكرة -->
+      <section class="slide" id="slide-8" data-title="من المشكلة إلى الفكرة">
+        <div class="slide-header">
+          <span class="slide-badge">SLIDE 08 — من المشكلة إلى الفكرة</span>
+          <img src="logo.png" alt="DZ Young Leaders" class="slide-header-logo" onerror="this.src='téléchargement.png'">
+        </div>
+        <div class="slide-body">
+          <h1 class="slide-title">المشكلة الجيدة تقود إلى سؤال جيد</h1>
+          <h3 class="slide-focus">مثال:</h3>
+
+          <div class="vertical-flow">
+            <div class="vertical-step">
+              <span style="color: var(--dz-red);">المشكلة:</span> قلة مشاركة الشباب في الأنشطة المحلية.
+            </div>
+            <div class="vertical-arrow">↓</div>
+            <div class="vertical-step">
+              <span style="color: var(--accent-gold);">السؤال:</span> كيف يمكننا جعل الأنشطة أكثر جذبًا للشباب؟
+            </div>
+            <div class="vertical-arrow">↓</div>
+            <div class="vertical-step" style="border-color: var(--dz-green); background: rgba(16, 185, 129, 0.1);">
+              <span style="color: var(--dz-green);">الفكرة:</span> إنشاء برنامج شبابي تفاعلي يجمع بين التعلم والتطوع
+              والتواصل.
+            </div>
+          </div>
+
+          <div class="quote-box">
+            الفكرة ليست الهدف.<br>
+            الفكرة هي بداية الحل.
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 9: IDEA → ACTION → IMPACT -->
+      <section class="slide" id="slide-9" data-title="من الفكرة إلى الأثر (المسار)">
+        <div class="slide-header">
+          <span class="slide-badge">SLIDE 09 — IDEA → ACTION → IMPACT</span>
+          <img src="logo.png" alt="DZ Young Leaders" class="slide-header-logo" onerror="this.src='téléchargement.png'">
+        </div>
+        <div class="slide-body">
+          <h1 class="slide-title">من الفكرة إلى الأثر</h1>
+
+          <div class="cards-grid cards-grid-3" style="margin: 1.5rem 0;">
+            <div class="info-card" style="text-align: center; border-color: rgba(217, 119, 6, 0.4);">
+              <h2
+                style="font-family: var(--font-en); font-size: 2rem; color: var(--accent-gold); margin-bottom: 0.5rem;">
+                IDEA</h2>
+              <p style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700;">ماذا نريد أن نفعل؟</p>
+            </div>
+
+            <div class="info-card" style="text-align: center; border-color: rgba(2, 132, 199, 0.4);">
+              <h2
+                style="font-family: var(--font-en); font-size: 2rem; color: var(--accent-cyan); margin-bottom: 0.5rem;">
+                ACTION</h2>
+              <p style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700;">كيف سننفذ؟</p>
+            </div>
+
+            <div class="info-card"
+              style="text-align: center; border-color: rgba(5, 150, 105, 0.5); background: rgba(5, 150, 105, 0.08);">
+              <h2 style="font-family: var(--font-en); font-size: 2rem; color: var(--dz-green); margin-bottom: 0.5rem;">
+                IMPACT</h2>
+              <p style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700;">ما التغيير الذي نريد أن
+                نراه؟</p>
+            </div>
+          </div>
+
+          <div class="quote-box"
+            style="text-align: center; border-right: none; border-bottom: 3px solid var(--dz-green);">
+            الفكرة وحدها لا تكفي.<br>
+            <span style="color: var(--dz-green);">التنفيذ هو ما يحولها إلى مبادرة.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 10: حوّل فكرتك إلى مبادرة -->
+      <section class="slide" id="slide-10" data-title="حوّل فكرتك إلى مبادرة">
+        <div class="slide-header">
+          <span class="slide-badge">SLIDE 10 — حوّل فكرتك إلى مبادرة</span>
+          <img src="logo.png" alt="DZ Young Leaders" class="slide-header-logo" onerror="this.src='téléchargement.png'">
+        </div>
+        <div class="slide-body">
+          <h1 class="slide-title">اسأل نفسك:</h1>
+
+          <div class="cards-grid cards-grid-4">
+            <div class="info-card">
+              <span class="card-num">1</span>
+              <p style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800;">ما المشكلة؟</p>
+            </div>
+            <div class="info-card">
+              <span class="card-num">2</span>
+              <p style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800;">من الفئة المستهدفة؟</p>
+            </div>
+            <div class="info-card">
+              <span class="card-num">3</span>
+              <p style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800;">ما الحل الذي نقترحه؟
+              </p>
+            </div>
+            <div class="info-card">
+              <span class="card-num">4</span>
+              <p style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800;">ما الأنشطة التي سنقوم
+                بها؟</p>
+            </div>
+            <div class="info-card">
+              <span class="card-num">5</span>
+              <p style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800;">من سيكون معنا في
+                الفريق؟</p>
+            </div>
+            <div class="info-card">
+              <span class="card-num">6</span>
+              <p style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800;">من يمكن أن يكون شريكًا؟
+              </p>
+            </div>
+            <div class="info-card">
+              <span class="card-num">7</span>
+              <p style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800;">ما الموارد التي
+                نحتاجها؟</p>
+            </div>
+            <div class="info-card" style="border-color: var(--dz-green); background: rgba(5, 150, 105, 0.08);">
+              <span class="card-num">8</span>
+              <p
+                style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--dz-green);">
+                ما الأثر الذي نريد تحقيقه؟</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 11: لا تبنِ فريقًا من الأشخاص... ابنِ فريقًا من الأدوار -->
+      <section class="slide" id="slide-11" data-title="فريق من الأدوار">
+        <div class="slide-header">
+          <span class="slide-badge">SLIDE 11 — هيكل الفريق</span>
+          <img src="logo.png" alt="DZ Young Leaders" class="slide-header-logo" onerror="this.src='téléchargement.png'">
+        </div>
+        <div class="slide-body">
+          <h1 class="slide-title">لا تبنِ فريقًا من الأشخاص... ابنِ فريقًا من الأدوار</h1>
+          <h3 class="slide-focus">كل مبادرة تحتاج إلى أدوار واضحة:</h3>
+
+          <div class="cards-grid cards-grid-5" style="margin: 1.2rem 0;">
+            <div class="info-card">
+              <div style="font-size: 2rem; margin-bottom: 0.4rem;">🎯</div>
+              <h4 class="card-title">قائد المبادرة</h4>
+              <p class="card-desc">التنسيق واتخاذ القرار</p>
+            </div>
+
+            <div class="info-card">
+              <div style="font-size: 2rem; margin-bottom: 0.4rem;">📣</div>
+              <h4 class="card-title">التواصل والإعلام</h4>
+              <p class="card-desc">الترويج والتغطية</p>
+            </div>
+
+            <div class="info-card">
+              <div style="font-size: 2rem; margin-bottom: 0.4rem;">📋</div>
+              <h4 class="card-title">التنظيم واللوجستيك</h4>
+              <p class="card-desc">المكان، المعدات، البرنامج</p>
+            </div>
+
+            <div class="info-card">
+              <div style="font-size: 2rem; margin-bottom: 0.4rem;">💡</div>
+              <h4 class="card-title">المحتوى والبرمجة</h4>
+              <p class="card-desc">الأفكار والأنشطة</p>
+            </div>
+
+            <div class="info-card">
+              <div style="font-size: 2rem; margin-bottom: 0.4rem;">📊</div>
+              <h4 class="card-title">المتابعة وقياس الأثر</h4>
+              <p class="card-desc">النتائج والمؤشرات</p>
+            </div>
+          </div>
+
+          <div class="quote-box" style="text-align: center;">
+            وضوح الأدوار = وضوح المسؤوليات
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 12: كيف نعرف أننا نجحنا؟ (KPA & KPI) -->
+      <section class="slide" id="slide-12" data-title="كيف نعرف أننا نجحنا؟ KPA & KPI">
+        <div class="slide-header">
+          <span class="slide-badge">SLIDE 12 — كيف نعرف أننا نجحنا؟</span>
+          <img src="logo.png" alt="DZ Young Leaders" class="slide-header-logo" onerror="this.src='téléchargement.png'">
+        </div>
+        <div class="slide-body">
+          <h1 class="slide-title">KPA & KPI</h1>
+
+          <div class="cards-grid cards-grid-2" style="margin: 1rem 0;">
+            <div class="info-card">
+              <h2
+                style="font-family: var(--font-en); font-size: 1.8rem; color: var(--accent-gold); margin-bottom: 0.2rem;">
+                KPA</h2>
+              <div
+                style="font-family: var(--font-en); font-size: 0.95rem; color: var(--text-dim); margin-bottom: 0.6rem;">
+                Key Performance Area</div>
+              <p style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 0.8rem;">مجال رئيسي نريد تحقيق نتائج
+                فيه.</p>
+              <div
+                style="background: rgba(5, 150, 105, 0.06); padding: 0.6rem 0.9rem; border-radius: var(--radius-sm); font-size: 1.05rem;">
+                <strong>مثال:</strong> التواصل والإعلام
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h2
+                style="font-family: var(--font-en); font-size: 1.8rem; color: var(--dz-green); margin-bottom: 0.2rem;">
+                KPI</h2>
+              <div
+                style="font-family: var(--font-en); font-size: 0.95rem; color: var(--text-dim); margin-bottom: 0.6rem;">
+                Key Performance Indicator</div>
+              <p style="font-size: 1.15rem; color: var(--text-main); margin-bottom: 0.8rem;">مؤشر يساعدنا على قياس
+                النتيجة.</p>
+              <div
+                style="background: rgba(5, 150, 105, 0.06); padding: 0.6rem 0.9rem; border-radius: var(--radius-sm); font-size: 1rem; line-height: 1.8;">
+                <strong>مثال:</strong><br>
+                عدد المنشورات • عدد المشاركين • نسبة الحضور • نسبة التفاعل
+              </div>
+            </div>
+          </div>
+
+          <div class="compare-container" style="margin-top: 0.5rem;">
+            <div class="compare-card compare-bad">
+              <span>لا تقل:</span>
+              <span style="font-size: 1.25rem;">❌ "نريد أن تكون المبادرة ناجحة."</span>
+            </div>
+            <div class="compare-card compare-good">
+              <span>قل:</span>
+              <span style="font-size: 1.25rem;">✅ "نريد الوصول إلى 50 شابًا وتحقيق نسبة حضور 80%."</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 13: نشاط 02 -->
+      <section class="slide" id="slide-13" data-title="نشاط 02 — مبادرتك في 20 دقيقة">
+        <div class="slide-header">
+          <span class="slide-badge">SLIDE 13 — نشاط 02</span>
+          <img src="logo.png" alt="DZ Young Leaders" class="slide-header-logo" onerror="this.src='téléchargement.png'">
+        </div>
+        <div class="slide-body">
+          <h1 class="slide-title">مبادرتك في 20 دقيقة 🚀</h1>
+
+          <div class="timer-widget">
+            <div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.2rem;">كوّنوا فرقًا من 4–6 أشخاص</h3>
+              <p style="color: var(--text-muted); font-size: 1rem;">اختاروا مشكلة شبابية واحدة ثم ابنوا مبادرتكم:</p>
+            </div>
+            <div class="timer-display" id="timer-display-13">20:00</div>
+            <div class="timer-controls">
+              <button class="btn-timer" onclick="startActivityTimer(1200, 'timer-display-13', this)">▶ بدء</button>
+              <button class="btn-timer reset" onclick="resetActivityTimer(1200, 'timer-display-13')">🔄 إعادة</button>
+            </div>
+          </div>
+
+          <div class="cards-grid cards-grid-4"
+            style="grid-template-columns: repeat(4, 1fr); gap: 0.8rem; margin-top: 0.5rem;">
+            <div class="info-card">
+              <span style="font-family: var(--font-en); font-weight: 800; color: var(--accent-gold);">PROBLEM</span>
+              <p style="font-weight: 700; margin-top: 0.2rem;">ما المشكلة؟</p>
+            </div>
+            <div class="info-card">
+              <span style="font-family: var(--font-en); font-weight: 800; color: var(--accent-cyan);">TARGET</span>
+              <p style="font-weight: 700; margin-top: 0.2rem;">من نستهدف؟</p>
+            </div>
+            <div class="info-card">
+              <span style="font-family: var(--font-en); font-weight: 800; color: var(--dz-green);">IDEA</span>
+              <p style="font-weight: 700; margin-top: 0.2rem;">ما فكرتنا؟</p>
+            </div>
+            <div class="info-card">
+              <span style="font-family: var(--font-en); font-weight: 800; color: #a855f7;">ACTION</span>
+              <p style="font-weight: 700; margin-top: 0.2rem;">ماذا سنفعل؟</p>
+            </div>
+            <div class="info-card">
+              <span style="font-family: var(--font-en); font-weight: 800; color: #ec4899;">TEAM</span>
+              <p style="font-weight: 700; margin-top: 0.2rem;">من سيفعل ماذا؟</p>
+            </div>
+            <div class="info-card">
+              <span style="font-family: var(--font-en); font-weight: 800; color: #3b82f6;">PARTNERS</span>
+              <p style="font-weight: 700; margin-top: 0.2rem;">من يمكن أن يساعدنا؟</p>
+            </div>
+            <div class="info-card">
+              <span style="font-family: var(--font-en); font-weight: 800; color: var(--dz-green);">KPI</span>
+              <p style="font-weight: 700; margin-top: 0.2rem;">كيف سنقيس النجاح؟</p>
+            </div>
+            <div class="info-card" style="border-color: var(--dz-green); background: rgba(16, 185, 129, 0.1);">
+              <span style="font-family: var(--font-en); font-weight: 800; color: var(--dz-green);">IMPACT</span>
+              <p style="font-weight: 700; margin-top: 0.2rem;">ما التغيير المتوقع؟</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 14: WHAT IF? 🤔 -->
+      <section class="slide" id="slide-14" data-title="WHAT IF? ماذا ستفعل لو...؟">
+        <div class="slide-header">
+          <span class="slide-badge">SLIDE 14 — WHAT IF? 🤔</span>
+          <img src="logo.png" alt="DZ Young Leaders" class="slide-header-logo" onerror="this.src='téléchargement.png'">
+        </div>
+        <div class="slide-body">
+          <h1 class="slide-title">ماذا ستفعل لو...؟</h1>
+          <h3 class="slide-focus" style="color: var(--dz-red);">المبادرة لا تسير دائمًا كما خططت لها.</h3>
+
+          <div class="cards-grid cards-grid-5">
+            <div class="info-card">
+              <span class="card-num" style="color: var(--dz-red);">التحدي 01</span>
+              <p style="font-weight: 700; font-size: 1.1rem;">ليس لديكم أي ميزانية.</p>
+            </div>
+
+            <div class="info-card">
+              <span class="card-num" style="color: var(--dz-red);">التحدي 02</span>
+              <p style="font-weight: 700; font-size: 1.1rem;">أحد أهم الشركاء انسحب.</p>
+            </div>
+
+            <div class="info-card">
+              <span class="card-num" style="color: var(--dz-red);">التحدي 03</span>
+              <p style="font-weight: 700; font-size: 1.1rem;">نصف أعضاء الفريق لم يعودوا متاحين.</p>
+            </div>
+
+            <div class="info-card">
+              <span class="card-num" style="color: var(--dz-red);">التحدي 04</span>
+              <p style="font-weight: 700; font-size: 1.1rem;">المكان الذي خططتم له أصبح غير متاح.</p>
+            </div>
+
+            <div class="info-card">
+              <span class="card-num" style="color: var(--dz-red);">التحدي 05</span>
+              <p style="font-weight: 700; font-size: 1.1rem;">لم يتجاوز الحضور 30% من المتوقع.</p>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin: 0.6rem 0;">
+            <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--accent-gold);">ماذا ستفعلون؟
+            </h2>
+          </div>
+
+          <div class="quote-box" style="margin-top: 0.5rem;">
+            القائد لا يبحث عن طريق مثالي...<br>
+            بل يجد طريقًا ممكنًا.
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 15: PITCH 🎤 -->
+      <section class="slide" id="slide-15" data-title="PITCH — دقيقتان لإقناعنا!">
+        <div class="slide-header">
+          <span class="slide-badge">SLIDE 15 — PITCH 🎤</span>
+          <img src="logo.png" alt="DZ Young Leaders" class="slide-header-logo" onerror="this.src='téléchargement.png'">
+        </div>
+        <div class="slide-body">
+          <h1 class="slide-title">لديك دقيقتان لإقناعنا!</h1>
+
+          <div class="timer-widget">
+            <div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.25rem;">قدّموا مبادرتكم في 120 ثانية:</h3>
+            </div>
+            <div class="timer-display" id="timer-display-15">02:00</div>
+            <div class="timer-controls">
+              <button class="btn-timer" onclick="startActivityTimer(120, 'timer-display-15', this)">▶ بدء</button>
+              <button class="btn-timer reset" onclick="resetActivityTimer(120, 'timer-display-15')">🔄 إعادة</button>
+            </div>
+          </div>
+
+          <div class="cards-grid"
+            style="grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.75rem; margin-top: 1rem;">
+            <div class="info-card" style="text-align: center;">
+              <span class="card-num">01</span>
+              <p style="font-family: var(--font-heading); font-weight: 800; font-size: 1.15rem;">المشكلة</p>
+            </div>
+
+            <div class="info-card" style="text-align: center;">
+              <span class="card-num">02</span>
+              <p style="font-family: var(--font-heading); font-weight: 800; font-size: 1.15rem;">الفكرة</p>
+            </div>
+
+            <div class="info-card" style="text-align: center;">
+              <span class="card-num">03</span>
+              <p style="font-family: var(--font-heading); font-weight: 800; font-size: 1.15rem;">الحل / الأنشطة</p>
+            </div>
+
+            <div class="info-card" style="text-align: center;">
+              <span class="card-num">04</span>
+              <p style="font-family: var(--font-heading); font-weight: 800; font-size: 1.15rem;">الفئة المستهدفة</p>
+            </div>
+
+            <div class="info-card" style="text-align: center;">
+              <span class="card-num">05</span>
+              <p style="font-family: var(--font-heading); font-weight: 800; font-size: 1.15rem;">الفريق</p>
+            </div>
+
+            <div class="info-card" style="text-align: center;">
+              <span class="card-num">06</span>
+              <p style="font-family: var(--font-heading); font-weight: 800; font-size: 1.15rem;">مؤشر النجاح KPI</p>
+            </div>
+
+            <div class="info-card"
+              style="text-align: center; border-color: var(--dz-green); background: rgba(5, 150, 105, 0.08);">
+              <span class="card-num">07</span>
+              <p
+                style="font-family: var(--font-heading); font-weight: 800; font-size: 1.15rem; color: var(--dz-green);">
+                الأثر المتوقع</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 16: كيف نقيس الأثر؟ (النشاط ≠ الأثر) -->
+      <section class="slide" id="slide-16" data-title="كيف نقيس الأثر؟">
+        <div class="slide-header">
+          <span class="slide-badge">SLIDE 16 — كيف نقيس الأثر؟</span>
+          <img src="logo.png" alt="DZ Young Leaders" class="slide-header-logo" onerror="this.src='téléchargement.png'">
+        </div>
+        <div class="slide-body">
+          <h1 class="slide-title">النشاط ≠ الأثر</h1>
+          <h3 class="slide-focus">مثال:</h3>
+
+          <div class="compare-container">
+            <div class="compare-card compare-bad">
+              <div style="font-size: clamp(1.05rem, 1.4vh + 0.35vw, 1.3rem); line-height: 1.6;">
+                ❌ <strong>قمنا بتنظيم ورشة لـ100 شاب.</strong>
+              </div>
+              <div style="font-size: 0.95rem; opacity: 0.9; margin-top: 0.3rem;">
+                هذا <strong>نشاط</strong>.
+              </div>
+            </div>
+
+            <div class="compare-card compare-good">
+              <div style="font-size: clamp(1.05rem, 1.4vh + 0.35vw, 1.3rem); line-height: 1.6;">
+                ✅ <strong>80% من المشاركين اكتسبوا مهارة جديدة.</strong>
+              </div>
+              <div style="font-size: 0.95rem; opacity: 0.9; margin-top: 0.3rem;">
+                هذا <strong>نتيجة قابلة للقياس</strong>.
+              </div>
+            </div>
+          </div>
+
+          <div class="quote-box" style="text-align: center; border-right: none; border: 2px solid var(--dz-green);">
+            والسؤال الأهم:<br>
+            <span style="font-size: 1.6rem; color: var(--dz-green);">ماذا تغيّر بسبب مبادرتنا؟</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 17: من تجربتي... -->
+      <section class="slide" id="slide-17" data-title="من تجربتي...">
+        <div class="slide-header">
+          <span class="slide-badge">SLIDE 17 — من تجربتي...</span>
+          <img src="logo.png" alt="DZ Young Leaders" class="slide-header-logo" onerror="this.src='téléchargement.png'">
+        </div>
+        <div class="slide-body">
+          <h1 class="slide-title">ماذا علّمتني التجارب الشبابية؟</h1>
+
+          <div
+            style="display: flex; gap: clamp(1rem, 2vw, 2rem); align-items: center; margin: clamp(0.3rem, 1vh, 0.8rem) 0;">
+            <img src="trainer.jpg" alt="جميلة حبيب"
+              style="width: clamp(100px, 16vh, 150px); height: clamp(100px, 16vh, 150px); border-radius: 50%; object-fit: cover; border: 3px solid var(--dz-green); box-shadow: 0 0 20px var(--dz-green-glow); flex-shrink: 0;"
+              onerror="this.src='member-6.jpg'">
+
+            <div style="flex: 1;">
+              <ul class="bullet-list">
+                <li class="bullet-item"><span class="bullet-dot">•</span> <strong>المشاركة</strong> تعطيك فرصة.</li>
+                <li class="bullet-item"><span class="bullet-dot">•</span> <strong>التطوع</strong> يعطيك خبرة.</li>
+                <li class="bullet-item"><span class="bullet-dot">•</span> <strong>المبادرة</strong> تعطيك مسؤولية.</li>
+                <li class="bullet-item"><span class="bullet-dot">•</span> <strong>العمل الجماعي</strong> يعلمك القيادة.
+                </li>
+                <li class="bullet-item"><span class="bullet-dot">•</span> <strong>التجارب الدولية</strong> توسّع رؤيتك.
+                </li>
+                <li class="bullet-item"><span class="bullet-dot">•</span> <strong>التحديات</strong> تصنع قدرتك على
+                  التكيف.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="quote-box">
+            كل تجربة صغيرة يمكن أن تكون بداية لشيء أكبر.
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 18: THINK BIG, START LOCAL 🌍 -->
+      <section class="slide" id="slide-18" data-title="THINK BIG, START LOCAL">
+        <div class="slide-header">
+          <span class="slide-badge">SLIDE 18 — THINK BIG, START LOCAL 🌍</span>
+          <img src="logo.png" alt="DZ Young Leaders" class="slide-header-logo" onerror="this.src='téléchargement.png'">
+        </div>
+        <div class="slide-body">
+          <h1 class="slide-title">العالم يبدأ من محيطك.</h1>
+
+          <div class="compare-container">
+            <div class="compare-card compare-bad">
+              <span style="font-size: 1.15rem; margin-bottom: 0.4rem;">لا تحتاج إلى:</span>
+              <ul class="bullet-list" style="gap: 0.5rem;">
+                <li class="bullet-item" style="color: inherit;">❌ منصب كبير</li>
+                <li class="bullet-item" style="color: inherit;">❌ فريق ضخم</li>
+                <li class="bullet-item" style="color: inherit;">❌ ميزانية كبيرة</li>
+                <li class="bullet-item" style="color: inherit;">❌ فكرة مثالية</li>
+              </ul>
+            </div>
+
+            <div class="compare-card compare-good">
+              <span style="font-size: 1.15rem; margin-bottom: 0.4rem;">تحتاج إلى:</span>
+              <ul class="bullet-list" style="gap: 0.5rem;">
+                <li class="bullet-item" style="color: inherit;">✅ مشكلة تؤمن بأهميتها</li>
+                <li class="bullet-item" style="color: inherit;">✅ فكرة قابلة للتنفيذ</li>
+                <li class="bullet-item" style="color: inherit;">✅ شخص يبدأ</li>
+                <li class="bullet-item" style="color: inherit;">✅ فريق يؤمن بالفكرة</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="quote-box" style="text-align: center;">
+            فكّر بشكل كبير...<br>
+            <span style="color: var(--dz-green);">وابدأ بخطوة صغيرة.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 19: REFLECTION -->
+      <section class="slide" id="slide-19" data-title="REFLECTION — والآن... دورك أنت">
+        <div class="slide-header">
+          <span class="slide-badge">SLIDE 19 — REFLECTION</span>
+          <img src="logo.png" alt="DZ Young Leaders" class="slide-header-logo" onerror="this.src='téléchargement.png'">
+        </div>
+        <div class="slide-body">
+          <h1 class="slide-title">والآن... دورك أنت.</h1>
+
+          <div class="timer-widget">
+            <div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.2rem;">خذ دقيقة واحدة واكتب:</h3>
+            </div>
+            <div class="timer-display" id="timer-display-19">01:00</div>
+            <div class="timer-controls">
+              <button class="btn-timer" onclick="startActivityTimer(60, 'timer-display-19', this)">▶ بدء</button>
+              <button class="btn-timer reset" onclick="resetActivityTimer(60, 'timer-display-19')">🔄 إعادة</button>
+            </div>
+          </div>
+
+          <div class="info-card" style="padding: 1.5rem; margin: 1rem 0;">
+            <ul class="bullet-list" style="gap: 0.9rem;">
+              <li class="bullet-item"><span class="bullet-dot">•</span> <strong>ما المشكلة التي أريد أن أساهم في
+                  حلها؟</strong></li>
+              <li class="bullet-item"><span class="bullet-dot">•</span> <strong>ما الفكرة التي يمكن أن أبدأ
+                  بها؟</strong></li>
+              <li class="bullet-item"><span class="bullet-dot">•</span> <strong>من يمكن أن أبدأ معه؟</strong></li>
+              <li class="bullet-item"><span class="bullet-dot">•</span> <strong>ما أول خطوة سأقوم بها؟</strong></li>
+            </ul>
+          </div>
+
+          <div class="quote-box" style="text-align: center; border-right: none; border: 2px dashed var(--accent-gold);">
+            والأهم...<br>
+            <span style="font-size: 1.7rem; color: var(--accent-gold);">متى سأبدأ؟</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 20: FINAL MESSAGE 🤍 -->
+      <section class="slide" id="slide-20" data-title="FINAL MESSAGE — القيادة تبدأ بخطوة">
+        <div class="slide-header">
+          <span class="slide-badge">SLIDE 20 — FINAL MESSAGE 🤍</span>
+          <img src="logo.png" alt="DZ Young Leaders" class="slide-header-logo" onerror="this.src='téléchargement.png'">
+        </div>
+        <div class="slide-body" style="text-align: center; justify-content: center; gap: 1.2rem;">
+          <h1 class="slide-title" style="font-size: clamp(2.4rem, 3.8vw, 3.4rem); margin-bottom: 0;">القيادة تبدأ بخطوة.
+          </h1>
+
+          <div
+            style="font-family: var(--font-heading); font-size: clamp(1.15rem, 1.6vw, 1.4rem); line-height: 1.9; color: var(--text-muted);">
+            لا تنتظر أن تكون لديك كل الإمكانيات.<br>
+            لا تنتظر أن يمنحك أحد لقبًا أو منصبًا.<br>
+            لا تنتظر أن تصبح الفكرة مثالية.
+          </div>
+
+          <div
+            style="font-family: var(--font-heading); font-size: clamp(1.4rem, 2vw, 1.8rem); font-weight: 900; color: var(--dz-green); line-height: 1.6;">
+            ابدأ بما لديك.<br>
+            بمن حولك.<br>
+            ومن حيث أنت.
+          </div>
+
+          <div class="quote-box"
+            style="margin: 0.5rem auto; max-width: 800px; text-align: center; border-right: none; border-bottom: 3px solid var(--dz-green); font-size: 1.25rem;">
+            القيادة لا تبدأ عندما تحصل على منصب،<br>
+            <span style="color: var(--dz-green);">القيادة تبدأ عندما تقرر أن تكون جزءًا من الحل.</span>
+          </div>
+
+          <div style="margin-top: 0.5rem;">
+            <h2
+              style="font-family: var(--font-en); font-size: 1.8rem; font-weight: 800; color: var(--text-main); letter-spacing: 0.05em;">
+              From Idea to Impact 🚀</h2>
+            <p
+              style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; color: var(--accent-gold); margin-top: 0.4rem;">
+              شكراً لكم 🤍</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Bottom Navigation and Controls Bar -->
+  <footer class="control-bar" role="toolbar" aria-label="أشرطة التحكم في العرض">
+    <div class="control-left">
+      <button class="btn-nav" id="btnPrev" title="الشريحة السابقة (السهم الأيمن / Backspace)">
+        <span>السابق</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+
+      <button class="btn-nav" id="btnNext" title="الشريحة التالية (السهم الأيسر / المسافة / Enter)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+        <span>التالي</span>
+      </button>
+    </div>
+
+    <div class="control-center">
+      <div class="slide-counter">
+        <span id="currentSlideNum">01</span> / <span id="totalSlideNum">20</span>
+      </div>
+
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="progressBar"></div>
+      </div>
+
+      <div class="kbd-hint" title="اختصارات لوحة المفاتيح">
+        <kbd>→</kbd> <kbd>←</kbd> <kbd>Space</kbd>
+      </div>
+    </div>
+
+    <div class="control-right">
+      <button class="btn-icon" id="btnOverview" title="فهرس جميع الشرائح (O)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+      </button>
+
+      <button class="btn-icon" id="btnTheme" title="تبديل الوضع الليلي / النهاري">
+        <svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
+
+      <button class="btn-icon" id="btnPrint" title="طباعة العرض / تصدير PDF">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 6 2 18 2 18 9"></polyline>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <rect x="6" y="14" width="12" height="8"></rect>
+        </svg>
+      </button>
+
+      <button class="btn-icon" id="btnFullscreen" title="ملء الشاشة (F)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3">
+          </path>
+        </svg>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Slide Overview Modal -->
+  <div class="modal-overlay" id="overviewModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>فهرس جميع الشرائح (20 شريحة)</h3>
+        <button class="btn-icon" id="btnCloseOverview">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-grid" id="overviewGrid">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
